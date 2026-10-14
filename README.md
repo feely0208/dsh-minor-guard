@@ -51,7 +51,11 @@ dsh plugin --profile web add @deepwhale-cn/dsh-minor-guard
 npx @deepwhale-cn/dsh-minor-guard
 ```
 
-![dsh-minor-guard 的检查报告示例](https://www.deepwhale.org.cn/plugin-assets/dsh-minor-guard/report.png)
+![dsh-minor-guard 检查报告示例](https://www.deepwhale.org.cn/plugin-assets/dsh-minor-guard/report.png)
+
+![dsh-minor-guard 演示模式输出](https://www.deepwhale.org.cn/plugin-assets/dsh-minor-guard/demo.png)
+
+![dsh-minor-guard 规则与依据](https://www.deepwhale.org.cn/plugin-assets/dsh-minor-guard/rules.png)
 
 ## 用法
 
