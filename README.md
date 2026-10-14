@@ -51,6 +51,8 @@ dsh plugin --profile web add @deepwhale-cn/dsh-minor-guard
 npx @deepwhale-cn/dsh-minor-guard
 ```
 
+![dsh-minor-guard 的检查报告示例](https://raw.githubusercontent.com/feely0208/dsh-minor-guard/main/docs/report.png)
+
 ## 用法
 
 ```bash
