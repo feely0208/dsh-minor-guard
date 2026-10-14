@@ -1,0 +1,16 @@
+{
+  "id": "MINOR-NO-AGE-GATE",
+  "title": "有账号注册，但找不到年龄识别",
+  "severity": "medium",
+  "source": "《个人信息保护法》第三十一条 —— 处理不满十四周岁未成年人个人信息应取得监护人同意（前提是能识别出年龄）；《儿童个人信息网络保护规定》第九条",
+  "advice": "项目有注册/账号体系，但代码里找不到年龄识别（年龄选择、出生日期、实名年龄）。**没有年龄识别就无法履行第 31 条** —— 你不知道用户是不是儿童，也就无从触发监护人同意流程。最低限度：注册时询问年龄，或在实名环节取年龄。",
+  "check": {
+    "type": "files-lack",
+    "pattern": "年龄|birthday|birth_date|birthDate|age\\s*[:=]|ageRange|age_range|出生日期|出生年月|实名.*年龄",
+    "flags": "i",
+    "paths": ["**/*.js", "**/*.mjs", "**/*.cjs", "**/*.ts", "**/*.tsx", "**/*.jsx", "**/*.vue", "**/*.py",
+              "**/*.go", "**/*.java", "**/*.kt", "**/*.ets", "**/*.wxml", "**/*.html"],
+    "when": "register|signup|sign_up|注册|createAccount|create_account",
+    "evidence": "有注册功能但找不到任何年龄识别"
+  }
+}

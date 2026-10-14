@@ -1,0 +1,4 @@
+# @deepwhale-cn/dsh-minor-guard 的组合层
+- insert:
+    - id: minor-guard
+      name: '@deepwhale-cn/dsh-minor-guard'

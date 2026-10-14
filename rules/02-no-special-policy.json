@@ -1,0 +1,14 @@
+{
+  "id": "MINOR-NO-SPECIAL-POLICY",
+  "title": "找不到专门的儿童个人信息处理规则",
+  "severity": "high",
+  "source": "《个人信息保护法》第三十一条 —— 处理不满十四周岁未成年人个人信息的，应当制定专门的个人信息处理规则；《儿童个人信息网络保护规定》第八条 —— 应制定专门的儿童个人信息保护规则",
+  "advice": "文档里找不到**专门**的儿童/未成年人个人信息保护规则。个保法第 31 条要求「制定专门的个人信息处理规则」—— 不是隐私政策里带一句，而是独立的一份。这一份要写明：收集范围、用途、保存期限、监护人如何行使权利。",
+  "check": {
+    "type": "files-lack",
+    "pattern": "儿童个人信息|未成年人个人信息|儿童个人信息保护规则|青少年模式规则|监护人同意|guardian consent|children'?s privacy",
+    "flags": "i",
+    "paths": ["README.md", "PRIVACY.md", "docs/*.md", "docs/**/*.md", "*.md", "**/privacy*.html", "**/privacy*.vue"],
+    "evidence": "文档里找不到专门的儿童/未成年人个人信息保护规则"
+  }
+}

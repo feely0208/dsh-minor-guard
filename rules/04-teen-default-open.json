@@ -1,0 +1,29 @@
+{
+  "id": "MINOR-DEFAULT-OPEN",
+  "title": "青少年/儿童相关开关默认开启",
+  "severity": "medium",
+  "source": "《儿童个人信息网络保护规定》第十一条 —— 收集、使用、转移、披露儿童个人信息应征得监护人同意；默认开启 = 未征得同意即处理",
+  "advice": "青少年模式/儿童专区之类的开关被设为默认值 true —— 用户什么都没做就已经进入该模式（可能伴随数据收集）。这类涉及未成年人的功能应**默认关闭、用户主动开启**，且开启前取得监护人同意。（本规则会跳过那些已经实现监护人同意流程的文件 —— 那种情况下的开启是合规的。）",
+  "check": {
+    "type": "file-pattern",
+    "pattern": "(青少年模式|儿童模式|未成年人模式|teenMode|teen_mode|childMode|child_mode|kidsMode|minorMode)[\\w.]*\\s*[:=]\\s*(true|1|[\"']?(on|enabled|open))",
+    "flags": "gi",
+    "exts": [
+      ".js",
+      ".mjs",
+      ".cjs",
+      ".ts",
+      ".tsx",
+      ".jsx",
+      ".vue",
+      ".json",
+      ".yml",
+      ".yaml",
+      ".ets"
+    ],
+    "max": 20,
+    "exclude": [
+      "requireGuardianConsent|guardianConsent|parentalConsent|监护人同意流程"
+    ]
+  }
+}
