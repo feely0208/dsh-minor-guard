@@ -1,0 +1,65 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; background:#0d0f13; display:flex; justify-content:center;
+         align-items:flex-start; padding:22px; font-family:-apple-system,"PingFang SC",
+         "Helvetica Neue",sans-serif; }
+  .win { width:1180px; border-radius:11px; overflow:hidden;
+          box-shadow:0 14px 44px rgba(0,0,0,.55); }
+  .bar { background:#2a2d34; padding:11px 15px; display:flex; align-items:center; gap:9px; }
+  .dot { width:12px; height:12px; border-radius:50%; }
+  .t { margin-left:11px; color:#7a8290; font-size:13px; letter-spacing:.02em; }
+  .term { background:#1b1d22; padding:20px 22px 24px; font-family:"SF Mono",Menlo,Consolas,
+           "PingFang SC",monospace; font-size:13.5px; line-height:1.72; }
+  .cmd { color:#5ee08a; margin-bottom:13px; font-size:13.5px; }
+  .cmd b { color:#fff; font-weight:600; }
+  .l { white-space:pre-wrap; word-break:break-word; }
+</style></head><body>
+  <div class="win">
+    <div class="bar">
+      <span class="dot" style="background:#ff5f57"></span>
+      <span class="dot" style="background:#febc2e"></span>
+      <span class="dot" style="background:#28c840"></span>
+      <span class="t">dsh-minor-guard · demo</span>
+    </div>
+    <div class="term">
+      <div class="cmd">$ <b>dsh-minor-guard --demo</b></div>
+      <div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  【演示模式】使用内置样本，不是你的真实项目。</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  深鲸守护 · 未成年人保护 v0.1.0</span></div>
+<div class="l"><span style="color:#d8dee9">  ──────────────────────────────────────────────────────────────────</span></div>
+<div class="l"><span style="color:#d8dee9">  扫描范围   内置演示样本 · 故意有问题的项目</span></div>
+<div class="l"><span style="color:#d8dee9">             2 个文件 · 0 个目录已跳过</span></div>
+<div class="l"><span style="color:#d8dee9">  检查规则   4/4 条</span></div>
+<div class="l"><span style="color:#ffd166">  命中       4 条</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#ff6b6b">  【高】2 条</span></div>
+<div class="l"><span style="color:#7a8290">    · 有未成年人功能，但找不到监护人同意的实现</span></div>
+<div class="l"><span style="color:#d8dee9">      位置  **/*.js</span></div>
+<div class="l"><span style="color:#7a8290">      证据  已检查 1 个文件，均未提到</span></div>
+<div class="l"><span style="color:#7a8290">      依据  《个人信息保护法》第三十一条 —— 处理不满十四周岁未成年人个人信息的，应当取得未成年人的父母或者其他监护人的同意；《儿童个人信息网络保护规定》第九条 —— 应征得儿童监护人同意</span></div>
+<div class="l"><span style="color:#d8dee9">      建议  项目里有面向未成年人或儿童的功能（青少年模式、儿童账号、年龄选择等），但代码里找不到「监护人同意」的实现。个保法第 31 条把不满 14 周岁的未成年人个人信息列为**特殊保护对象** —— 同意必须来自监护人，不是孩子本人。做法：年龄识别 → 判定为儿童 → 弹监护人同意流程 → 留存同意记录。</span></div>
+<div class="l"><span style="color:#7a8290">    · 找不到专门的儿童个人信息处理规则</span></div>
+<div class="l"><span style="color:#d8dee9">      位置  README.md</span></div>
+<div class="l"><span style="color:#7a8290">      证据  以下文件都不存在：README.md / PRIVACY.md / docs/*.md …</span></div>
+<div class="l"><span style="color:#7a8290">      依据  《个人信息保护法》第三十一条 —— 处理不满十四周岁未成年人个人信息的，应当制定专门的个人信息处理规则；《儿童个人信息网络保护规定》第八条 —— 应制定专门的儿童个人信息保护规则</span></div>
+<div class="l"><span style="color:#d8dee9">      建议  文档里找不到**专门**的儿童/未成年人个人信息保护规则。个保法第 31 条要求「制定专门的个人信息处理规则」—— 不是隐私政策里带一句，而是独立的一份。这一份要写明：收集范围、用途、保存期限、监护人如何行使权利。</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#ffd166">  【中】2 条</span></div>
+<div class="l"><span style="color:#7a8290">    · 有账号注册，但找不到年龄识别</span></div>
+<div class="l"><span style="color:#d8dee9">      位置  **/*.js</span></div>
+<div class="l"><span style="color:#7a8290">      证据  已检查 1 个文件，均未提到</span></div>
+<div class="l"><span style="color:#7a8290">      依据  《个人信息保护法》第三十一条 —— 处理不满十四周岁未成年人个人信息应取得监护人同意（前提是能识别出年龄）；《儿童个人信息网络保护规定》第九条</span></div>
+<div class="l"><span style="color:#d8dee9">      建议  项目有注册/账号体系，但代码里找不到年龄识别（年龄选择、出生日期、实名年龄）。**没有年龄识别就无法履行第 31 条** —— 你不知道用户是不是儿童，也就无从触发监护人同意流程。最低限度：注册时询问年龄，或在实名环节取年龄。</span></div>
+<div class="l"><span style="color:#7a8290">    · 青少年/儿童相关开关默认开启</span></div>
+<div class="l"><span style="color:#d8dee9">      位置  teen.js:2</span></div>
+<div class="l"><span style="color:#7a8290">      证据  teenMode = true</span></div>
+<div class="l"><span style="color:#7a8290">      依据  《儿童个人信息网络保护规定》第十一条 —— 收集、使用、转移、披露儿童个人信息应征得监护人同意；默认开启 = 未征得同意即处理</span></div>
+<div class="l"><span style="color:#d8dee9">      建议  青少年模式/儿童专区之类的开关被设为默认值 true —— 用户什么都没做就已经进入该模式（可能伴随数据收集）。这类涉及未成年人的功能应**默认关闭、用户主动开启**，且开启前取得监护人同意。（本规则会跳过那些已经实现监护人同意流程的文件 —— 那种情况下的开启是合规的。）</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  ──────────────────────────────────────────────────────────────────</span></div>
+    </div>
+  </div>
+</body></html>
