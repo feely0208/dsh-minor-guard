@@ -1,5 +1,7 @@
 # @deepwhale-cn/dsh-minor-guard
 
+[![dshfind 收录](https://dshfind.com/api/badge/feely0208/dsh-minor-guard?lang=zh)](https://dshfind.com/zh/plugins/feely0208/dsh-minor-guard)
+
 **未成年人保护** —— 查不满 14 周岁个人信息有没有监护人同意、专门规则、年龄门槛。
 
 ## 不装它会怎样
